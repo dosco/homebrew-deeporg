@@ -5,13 +5,13 @@
 class Graphjin < Formula
   desc "One AI agent for your whole organization (old name of deeporg)"
   homepage "https://deeporg.io"
-  version "3.21.29"
+  version "3.21.30"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dosco/deeporg/releases/download/v3.21.29/deeporg_3.21.29_darwin_amd64.tar.gz"
-      sha256 "86408c239a9b93c4cf6b6bec9619347bd08ebee60a46b9d45f3da1162211edaa"
+      url "https://github.com/dosco/deeporg/releases/download/v3.21.30/deeporg_3.21.30_darwin_amd64.tar.gz"
+      sha256 "15ee83eb7557c0830a301c478fc2a201c8b73274e758535e3fa8c00427be8512"
 
       define_method(:install) do
         bin.install "deeporg"
@@ -19,8 +19,8 @@ class Graphjin < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dosco/deeporg/releases/download/v3.21.29/deeporg_3.21.29_darwin_arm64.tar.gz"
-      sha256 "55794230f59c65ee9293723478b3522b0fffd0c1aa3e3d69329411ced8effd9e"
+      url "https://github.com/dosco/deeporg/releases/download/v3.21.30/deeporg_3.21.30_darwin_arm64.tar.gz"
+      sha256 "f567065edea91e2e05bb1bfebb9850c407b9b41240a76136776399d00677c5a6"
 
       define_method(:install) do
         bin.install "deeporg"
@@ -31,16 +31,16 @@ class Graphjin < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dosco/deeporg/releases/download/v3.21.29/deeporg_3.21.29_linux_amd64.tar.gz"
-      sha256 "c2f01049293e57f4a73219e208ee8a67333b21faa42a64fec2fc5dfeec2dc353"
+      url "https://github.com/dosco/deeporg/releases/download/v3.21.30/deeporg_3.21.30_linux_amd64.tar.gz"
+      sha256 "69bbf41e77ba6e5a02d63e1295831ad104e4201fba63056a3fa4df1dcda95127"
       define_method(:install) do
         bin.install "deeporg"
         bin.install_symlink bin/"deeporg" => "graphjin"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dosco/deeporg/releases/download/v3.21.29/deeporg_3.21.29_linux_arm64.tar.gz"
-      sha256 "f205984f53c938d945ed10a43fd1b6a6d2cdf1c5b4a3ce7205a3e0c7ce196c98"
+      url "https://github.com/dosco/deeporg/releases/download/v3.21.30/deeporg_3.21.30_linux_arm64.tar.gz"
+      sha256 "2355810bf3f01a64d079c25c5afdc04c5cac27855dbfed13e1b4cde7e5cd0aa5"
       define_method(:install) do
         bin.install "deeporg"
         bin.install_symlink bin/"deeporg" => "graphjin"
